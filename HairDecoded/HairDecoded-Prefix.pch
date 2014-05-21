@@ -1,0 +1,65 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+
+#define commonColor [UIColor colorWithRed:0/255.0 green:187/255.0 blue:199/255.0 alpha:1.0]
+#define docs [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+#define IS_IPHONE_5 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
+
+#define SafeReleaseNSObject(_x) { if(_x) {[_x release]; _x=0; } }
+
+
+
+#define Register @"http://hairdecoded.com/?method=Register"
+#define GetProfile @"http://hairdecoded.com/?method=GetProfile"
+#define UpdateProfile @"http://hairdecoded.com/?method=SetProfile"
+
+#define GetComments @"http://hairdecoded.com/?method=GetMyPhotosComments"
+#define SetComment @"http://hairdecoded.com/?method=PostComment"
+#define LikeComment @"http://hairdecoded.com/?method=LikeComment"
+
+#define UploadFile @"http://hairdecoded.com/?method=PictureUpload"
+#define GetImages @"http://hairdecoded.com/?method=GetImage"
+#define SetImageComment @"http://hairdecoded.com/?method=PostImgComment"
+
+#define GetCalendar @"http://hairdecoded.com/?method=GetCalendar"
+#define GetImageDetails @"http://hairdecoded.com/?method=GetImageDetails"
+#define LikeImage @"http://hairdecoded.com/?method=LikeImage"
+#define DeleteImage @"http://hairdecoded.com/?method=DeleteImage"
+#define GetLikedImages @"http://hairdecoded.com/?method=GetLikedImage"
+#define SearchUser @"http://hairdecoded.com/?method=SearchUsers"
+#define SearchImage @"http://hairdecoded.com/?method=SearchPhotos"
+#define GetFollowImages @"http://hairdecoded.com/?method=GetImgFollowers"
+#define FollowUser @"http://hairdecoded.com/?method=followUser"
+#define GetIdFollowers @"http://hairdecoded.com/?method=GetIdFollowers"
+
+
+#define ProblemReport @"http://hairdecoded.com/?method=ProblemReport"
+#define DeleteAccount @"http://hairdecoded.com/?method=DeleteAccount"
+#define Contact @"http://hairdecoded.com/?method=Contact"
+#define CheckUserAccount @"http://hairdecoded.com/?method=CheckUserAccount"
+
+#define ImageURL @"http://hairdecoded.com/resources/photo/"
+
+
+#import "Custom.h"
+#import "AppDelegate.h"
+#import "UIImageView+Cached.h"
+
+
